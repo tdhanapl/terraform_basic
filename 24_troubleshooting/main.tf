@@ -5,7 +5,7 @@ terraform {
       version = "3.58.0"
     }
   }
-
+}
 
 provider "aws" {
   profile = "default"
