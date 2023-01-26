@@ -42,7 +42,7 @@ resource "aws_instance" "test-terraform" {
   subnet_id     = data.aws_subnet.selected.id
   #tenancy = tenancy
   tags = {
-    Name = "var.tags-${count.index}"
+    Name = var.tags-"${count.index}"
   }
 }
 ##command for creating##
