@@ -9,8 +9,7 @@ terraform {
 }
 
 provider "aws" {
-  region     = "ap-south-1"
-  
+  region     = "ap-south-1" 
 }
 ##data source of aws_subnet
 data "aws_subnet" "selected" {
