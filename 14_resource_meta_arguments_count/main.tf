@@ -1,4 +1,4 @@
-#count=2--it will create 2  number ec2-instance
+#count=2 --it will create 2  number ec2-instance
 terraform {
   required_providers {
     aws = {
