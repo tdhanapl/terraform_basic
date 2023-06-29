@@ -15,13 +15,13 @@ provider "aws" {
 provider "aws" {
   profile = "default"
   region  = "us-east-2"
-	alias = "east"
+  alias = "east"
 }
 
 provider "aws" {
   profile = "default"
   region  = "us-west-1"
-	alias = "west"
+  alias = "west"
 }
 data "aws_ami" "east-amazon-linux-2" {
 	provider = aws.east

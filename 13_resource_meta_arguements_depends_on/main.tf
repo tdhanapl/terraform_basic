@@ -16,7 +16,6 @@ provider "aws" {
 resource "aws_s3_bucket" "bucket" {
   bucket = "43802482094298-depends-on"
 }
-
 resource "aws_instance" "my_server" {
   ami           = "ami-087c17d1fe0178315"
   instance_type = "t2.micro"

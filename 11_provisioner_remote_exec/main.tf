@@ -49,13 +49,16 @@ resource "aws_instance" "test-terraform" {
   }
   provisioner "remote-exec" {
     inline = [
-      "echo ${self.private_ip} >> /home/ec2-user/private_ips.txt"
+      "echo ${self.private_ip} >> /home/ec2-user/private_ips.txt",
+      "sudo yum -y install nginx",
+      "sudo systemctl start nginx"
     ]
   }
   tags = {
     Name = var.tags
   }
 }
+
 ##command for creating##
 # terraform init 
 # terraform plan 

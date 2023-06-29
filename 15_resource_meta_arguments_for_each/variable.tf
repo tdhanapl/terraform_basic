@@ -23,7 +23,7 @@ variable "ami_image_id" {
   default     = {
     redhat = "ami-06a0b4e3b7eb7a300"
     amazon = "ami-079b5e5b3971bd10d"
-	ubuntu = "ami-068257025f72f470d"
+	  ubuntu = "ami-068257025f72f470d"
   }
 }
 # ec2 instance_type
