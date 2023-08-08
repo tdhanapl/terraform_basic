@@ -103,7 +103,7 @@ variable "ami_image_id" {
   default     = {
     redhat = "ami-06a0b4e3b7eb7a300"
     amazon = "ami-079b5e5b3971bd10d"
-	ubuntu = "ami-068257025f72f470d"
+	  ubuntu = "ami-068257025f72f470d"
   }
 }
 
@@ -194,7 +194,8 @@ $ terraform destroy -target aws_iam_user.user_name[2]
 
 ## How to do changes in the configuration of already created resources using terraform 
  For that we can use one command called terraform import 
- $ terraform import <resource_type>.<resource_name> [unique_id_from_aws] 
+ $ terraform import <resource_type>.<resource_name> [unique_id_from_aws]
+  
 ##If you lose the terraform state file 
 The process of recovering a deleted state file is never easy. You should import all the resources with terraform import
 
