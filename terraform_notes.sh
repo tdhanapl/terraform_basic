@@ -172,9 +172,6 @@ $ terraform output vpc_idl
 ##Update the terraform state file  to match remote systems
 $ terraform  refresh
 
-##update the new change like delete or add from console level from remote  to terraform code file.
-$ terraform apply -refresh-only
-
 ## Show the current state or a saved plan
 Inspect the current state using terraform show.
 $ terraform show
