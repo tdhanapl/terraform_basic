@@ -170,7 +170,16 @@ $ terraform output <name>
 $ terraform output vpc_idl
 
 ##Update the terraform state file  to match remote systems
-$ terraform  refresh
+$ terraform  apply refresh --> refresh module deprecated need to refresh-only
+Note:
+-->terraform refresh will not modify your real objects, but it will modfiy the terraform state.
+--> terraform refresh has been deprectated and with the refresh-only because it was not safe since it did not give you an opportunity to review propesed changes before updating state file.
+
+$ terraform  apply -refresh-only
+Note:
+--> terraform will notic that vm you provisioned is missing 
+--> With the refresh-only flag that the missing VM is intentional 
+--> terraform will propose to delete the VM from the state file. the state file is wrong changes the state file to macth infrastruture.
 
 ## Show the current state or a saved plan
 Inspect the current state using terraform show.
