@@ -15,7 +15,8 @@
 #	 ubuntu-ami = "ami-068257025f72f470d"
 # }
 #}
-# image ami_image_id
+
+## image ami_image_id
 variable "ami_image_id" {
   description = "ami_name"
   type        = map
@@ -23,7 +24,7 @@ variable "ami_image_id" {
   default     = {
     redhat = "ami-06a0b4e3b7eb7a300"
     amazon = "ami-079b5e5b3971bd10d"
-	ubuntu = "ami-068257025f72f470d"
+	  ubuntu = "ami-068257025f72f470d"
   }
 }
 # ec2 instance_type
@@ -52,8 +53,8 @@ variable "availability_zone" {
   #default     = "ap-south-1a"
   default     = {
     AZ1 = "ap-south-1a"
-	AZ2 = "ap-south-1b"
-	AZ2 = "ap-south-1c"
+	  AZ2 = "ap-south-1b"
+	  AZ2 = "ap-south-1c"
   }
 }
 ##ec2 vpc_id

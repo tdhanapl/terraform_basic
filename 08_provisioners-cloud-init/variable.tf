@@ -52,8 +52,8 @@ variable "availability_zone" {
   #default     = "ap-south-1a"
   default     = {
     AZ1 = "ap-south-1a"
-	AZ2 = "ap-south-1b"
-	AZ2 = "ap-south-1c"
+	  AZ2 = "ap-south-1b"
+	  AZ2 = "ap-south-1c"
   }
 }
 ##ec2 vpc_id

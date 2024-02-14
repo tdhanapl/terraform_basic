@@ -33,12 +33,8 @@ resource "aws_instance" "test-terraform" {
   #subnet_id = var.public_subnet_id
   subnet_id     = data.aws_subnet.selected.id
   #tenancy = tenancy
-##provisioner local-execuation
-  #provisioner "local-exec" {
-  #  command = "echo ${self.private_ip} >> private_ips.txt"
-  #}
-  # Establishes connection to be used by all
-  # generic remote provisioners (i.e. file/remote-exec)
+
+  ## generic remote provisioners (i.e. file/remote-exec)
   provisioner "file" {
   content     = "I am creating a file"
   destination = "/home/ec2-user/store.txt"

@@ -19,6 +19,16 @@ data "aws_security_groups" "test" {
   }
   
 }
+##data "aws_vpcs" "example" {
+ ## tags = {
+ #   Name = "example-vpc"
+  #}
+#}
+
+#output "vpc_ids" {
+ # value = data.aws_vpcs.example.ids
+#}
+
 ##creating the ec2-instance
 resource "aws_instance" "test-terraform" {
   count = 2 #It will create 2 instance
